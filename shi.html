@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shaistaa ❤️</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff416c,#ff4b2b);
+    overflow:hidden;
+}
+
+.container{
+    text-align:center;
+}
+
+#heart{
+    font-size:140px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat{
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.25);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+}
+
+#letter{
+    display:none;
+    width:350px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 0 25px rgba(0,0,0,.3);
+    animation:showLetter 1s ease forwards;
+}
+
+@keyframes showLetter{
+
+    from{
+        opacity:0;
+        transform:translateY(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+h1{
+    color:#ff416c;
+    margin-bottom:15px;
+}
+
+p{
+    color:#333;
+    font-size:18px;
+    line-height:1.6;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div id="heart">❤️</div>
+
+    <div id="letter">
+
+        <h1>Shaistaa ❤️</h1>
+
+        <p>
+            Every beat of my heart reminds me of you.
+            <br><br>
+            No matter where life takes us,
+            you'll always be special to me. ❤️
+        </p>
+
+    </div>
+
+</div>
+
+<script>
+
+const heart = document.getElementById("heart");
+const letter = document.getElementById("letter");
+
+// 2 sec baad heart tootega
+setTimeout(function(){
+
+    heart.innerHTML = "💔";
+
+},2000);
+
+// 4 sec baad letter show hogi
+setTimeout(function(){
+
+    heart.style.display = "none";
+    letter.style.display = "block";
+
+},4000);
+
+</script>
+
+</body>
+</html>
